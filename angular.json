@@ -17,7 +17,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/othisis-medtech",
+            "outputPath": "docs",
+            "baseHref": "/othesis-medtech/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [

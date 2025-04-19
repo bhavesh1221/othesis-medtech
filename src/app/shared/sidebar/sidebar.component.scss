@@ -1,0 +1,56 @@
+.sidenav-container {
+    height: 100%;
+    
+    .app-sidenav {
+      transition: width 0.3s ease;
+      overflow-x: hidden;
+      box-shadow: 3px 0 6px rgba(0,0,0,0.24);
+      
+      .sidebar-header {
+        display: flex;
+        align-items: center;
+        height: 64px; // Match navbar height
+        padding: 0 16px;
+        border-bottom: 1px solid rgba(0,0,0,0.12);
+        
+        .toggle-button {
+          margin-right: 8px;
+        }
+        
+        .sidebar-title {
+          font-weight: 500;
+          white-space: nowrap;
+        }
+      }
+      
+      mat-nav-list {
+        padding-top: 0;
+        
+        a.mat-list-item {
+          height: 48px;
+          &.active {
+            background-color: rgba(0,0,0,0.04);
+          }
+          
+          mat-icon {
+            margin-right: 16px;
+            min-width: 24px; // Prevent icon movement
+          }
+          
+          .menu-text {
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    
+    mat-sidenav-content {
+      height: 100%;
+      margin-left: 64px; // Match collapsed sidebar width
+      transition: margin-left 0.3s ease;
+      
+      &.expanded {
+        margin-left: 250px; // Match expanded sidebar width
+      }
+    }
+  }

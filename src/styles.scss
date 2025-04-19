@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.content {
+  padding: 16px;
+  margin-top: 64px; // for fixed toolbar
+}
+
+.template-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  max-height: calc(100vh - 180px);
+  overflow-y: auto;
+}
+
+.template-card {
+  cursor: move;
+  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
+  
+  &:active {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.app-sidenav {
+  width: 250px;
+  padding-top: 64px; // below toolbar
+}
+.mat-toolbar {
+  background-color: #151515 !important;
+  color: #FFFFFF !important;
+}
